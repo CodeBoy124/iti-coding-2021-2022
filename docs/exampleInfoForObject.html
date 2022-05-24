@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Namespace: exampleInfoForObject</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Namespace: exampleInfoForObject</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>exampleInfoForObject</h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class="description">example info for creating an object</div>
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line187">line 187</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".autoRemove"><span class="type-signature">(static) </span>autoRemove<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    when enabled this will remove the object if it no longer visible
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line251">line 251</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function myUpdate(deltaTime){  // creates a new particle every frame and removes the particle when it is no longer visible  // this is important, because the computer would differently have to calculate the movement of every object.  // event the once not visible  scene.add.dynamic(new Vector2(0, 0), new Vector2(10, 10), {    type: "fill",    color: "green",    autoRemove: true,    velocity: new Vector2(random(-200, 200), random(-200, 200))  });}scene.update = myUpdate;</code></pre>
+
+
+
+        
+            
+<h4 class="name" id=".background"><span class="type-signature">(static) </span>background<span class="type-signature"> :boolean</span></h4>
+
+
+
+
+<div class="description">
+    ONLY when using a type of UIwhen enabled this will place the object behind all other objects
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line221">line 221</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// this is drawn in the front layer, so it is drawn after the dynamic, static and background ui objectsscene.add.ui(new Vector2(0, 0), new Vector2(50, 50), {  type: "fill",  color: "green"});// this one gets drawn at the start, so it is behind the dynamic, static and regular ui objectsscene.add.ui(new Vector2(0, 0), new Vector2(100, 100), {  type: "fill",  color: "darkgreen",  background: true});</code></pre>
+
+
+
+        
+            
+<h4 class="name" id=".bounce"><span class="type-signature">(static) </span>bounce<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    ONLY for STATIC OBJECTSthis is how much of the speed will remain on a dynamic object that hits this object.For example when this is 0 then when a dynamic objects hits this object the dynamic object will completly stop movingAnd when it's set to 1 the dynamic object will bounce away with the speed it had when hittin this object
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line310">line 310</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".color"><span class="type-signature">(static) </span>color<span class="type-signature"> :color</span></h4>
+
+
+
+
+<div class="description">
+    ONLY when using a type of FILL or TEXTthis is a color string.You can easily search google for a rgb/rgba color picker
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">color</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line203">line 203</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".image"><span class="type-signature">(static) </span>image<span class="type-signature"> :image</span></h4>
+
+
+
+
+<div class="description">
+    ONLY when using a type of IMAGEthis is the image you want to show for this object
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">image</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line284">line 284</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>var myImage = new Image();myImage.src = "path/to/the/image.png";scene.add.dynamic(new Vector2(0, 0), new Vector2(50, 50), {  type: "image",  image: myImage});</code></pre>
+
+
+
+        
+            
+<h4 class="name" id=".multiplyGravity"><span class="type-signature">(static) </span>multiplyGravity<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    ONLY for DYNAMIC OBJECTSthis is how much the gravity effects this object.the higher this value the stronger the gravity pulls on this object
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line302">line 302</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>// since 1 is the gravity factor for earths gravity (9.807 m/s squered) you have to divide 1 by 9.807 and then multiply by the speed in m/s squered you wantfunction gravityToFactor(n){  return 1 / 9.807 * n;}scene.add.dynamic(new Vector2(0, 0), new Vector2(50, 50), {  type: "text",  text: "Moon gravity",  size: 14,  multiplyGravity: gravityToFactor(1.62) // the gravity of the moon is 1.62 m/s squered})</code></pre>
+
+
+
+        
+            
+<h4 class="name" id=".size"><span class="type-signature">(static) </span>size<span class="type-signature"> :number</span></h4>
+
+
+
+
+<div class="description">
+    ONLY when using a type of TEXTthis is the font size in pixels
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line233">line 233</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".text"><span class="type-signature">(static) </span>text<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    ONLY when using a type of TEXTthis is the text you want to show
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line227">line 227</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".type"><span class="type-signature">(static) </span>type<span class="type-signature"> :string</span></h4>
+
+
+
+
+<div class="description">
+    REQUIREDthis needs to be one of the following - "fill" when you want one solid color - "image" when you want to show an image - "text" when you want to have to text in one solid color
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">string</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line196">line 196</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+            
+<h4 class="name" id=".velocity"><span class="type-signature">(static) </span>velocity<span class="type-signature"> :<a href="Vector2.html">Vector2</a></span></h4>
+
+
+
+
+<div class="description">
+    ONLY for DYNAMIC OBJECTSthis is the velocity of the object (at least at the start, but you can set this property later too)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="Vector2.html">Vector2</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line270">line 270</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function myUpdate(deltaTime){  // creates a new particle every frame and removes the particle when it is no longer visible  // this is important, because the computer would differently have to calculate the movement of every object.  // event the once not visible  scene.add.dynamic(new Vector2(0, 0), new Vector2(10, 10), {    type: "fill",    color: "green",    autoRemove: true,    velocity: new Vector2(random(-200, 200), random(-200, 200))  });}scene.update = myUpdate;</code></pre>
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".click"><span class="type-signature">(static) </span>click<span class="signature">(button)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    when the user clicks on this object this function will get triggered.The button string will be either "left" for a left mouse click or "right" for a right mouse click
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>button</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line354">line 354</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function objectClicked(mouseButton){  if(mouseButton == "left"){    // left mouse button    // your code  }else if(mouseButton == "right"){    // right mouse button    // your code  }}scene.add.dynamic(new Vector2(0, 0), new Vector2(50, 50), {  type: "fill",  color: "green",  click: objectClicked});</code></pre>
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".whenHit"><span class="type-signature">(static) </span>whenHit<span class="signature">(guid)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    ONLY for STATIC OR DYNAMIC OBJECTSthis function will get triggered when another objects hits this objectThis uniqueIdentifier is the same as the functions for creating objects return
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>guid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">uniqueIdentifier</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="lib.js.html">lib.js</a>, <a href="lib.js.html#line333">line 333</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>function wallRemoved(){  // your code}// some code &amp; code to add the playerfunction wallHitBy(uniqueIdentifier){  if(uniqueIdentifier == playerUniqueIdentifier){    // removes this wall when hit by the player    scene.remove(wallUniqueIdentifier, wallRemoved);  }}scene.add.static(new Vector2(0, 0), new Vector2(50, 50), {  type: "fill",  color: "brown",  whenHit: wallHitBy});</code></pre>
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="Array.html">Array</a></li><li><a href="exampleInfoForObject.html">exampleInfoForObject</a></li><li><a href="scene.html">scene</a></li><li><a href="scene.add.html">add</a></li><li><a href="scene.input.html">input</a></li></ul><h3>Classes</h3><ul><li><a href="Vector2.html">Vector2</a></li></ul><h3>Global</h3><ul><li><a href="global.html#angleToVector">angleToVector</a></li><li><a href="global.html#distance">distance</a></li><li><a href="global.html#pointFromOrigin">pointFromOrigin</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#vectorToAngle">vectorToAngle</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Tue May 24 2022 18:50:36 GMT+0200 (Midden-Europese zomertijd)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
